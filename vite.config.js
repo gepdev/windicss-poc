@@ -1,13 +1,17 @@
 import WindiCSS from 'vite-plugin-windicss'
 import { posthtmlPlugin } from 'vite-plugin-posthtml'
-import include from 'posthtml-include'
+
+const include = require('posthtml-include')
+const extend = require('posthtml-extend')
 
 export default {
+  root: './src',
   plugins: [
     WindiCSS(),
     posthtmlPlugin({
       plugins: [
-        include()
+        require('posthtml-extend')(),
+        require('posthtml-include')()
       ]
     })
   ]
