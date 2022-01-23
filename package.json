@@ -10,7 +10,7 @@
     "posthtml-extend": "^0.6.2",
     "posthtml-include": "^1.7.2",
     "vite": "^2.7.2",
-    "vite-plugin-posthtml": "^0.0.3",
+    "vite-plugin-posthtml": "https://github.com/gepdev/vite-plugin-posthtml.git",
     "vite-plugin-windicss": "^1.6.3",
     "windicss": "^3.4.3"
   },

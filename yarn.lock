@@ -521,10 +521,9 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-vite-plugin-posthtml@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/vite-plugin-posthtml/-/vite-plugin-posthtml-0.0.3.tgz#e27ba7e0b0cdb3251b0fc4b649be40682b37542a"
-  integrity sha512-1IuDIGI7Hw2O+c7CGGKtCO4LGDhnaYAVuybrolLW6Kugi+QT1V9C/8SE1ZFDgeIdr3DAkc9+ByneD7xMtN9vGg==
+"vite-plugin-posthtml@https://github.com/gepdev/vite-plugin-posthtml.git":
+  version "0.0.2"
+  resolved "https://github.com/gepdev/vite-plugin-posthtml.git#03843a245d7ab9359b9fbcf81b4590fd2cc70b91"
   dependencies:
     posthtml "^0.15.2"
 
