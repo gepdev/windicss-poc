@@ -61,9 +61,11 @@ jobs:
       # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
       #    and modify them (or add more) to build your code if your project
       #    uses a compiled language
+      - name: Install Dependencies
+        run: yarn install
 
-      - run: |
-        npm run lint
+      - name: Install Dependencies
+        run: yarn lint
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
