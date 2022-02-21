@@ -64,7 +64,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      - name: Install Dependencies
+      - name: Run code linters
         run: yarn lint
 
       - name: Perform CodeQL Analysis
