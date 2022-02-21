@@ -4,16 +4,23 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analysis": "windicss-analysis",
+    "lint": "eslint ./src"
   },
   "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
     "posthtml-extend": "^0.6.2",
     "posthtml-include": "^1.7.2",
+    "prettier": "^2.5.1",
     "sass": "^1.49.0",
     "vite": "^2.7.2",
-    "vite-plugin-posthtml": "https://github.com/gepdev/vite-plugin-posthtml.git",
+    "vite-plugin-posthtml": "^0.0.3",
     "vite-plugin-windicss": "^1.6.3",
-    "windicss": "^3.4.3"
-  },
-  "dependencies": {}
+    "windicss": "^3.4.3",
+    "windicss-analysis": "^0.3.5"
+  }
 }
