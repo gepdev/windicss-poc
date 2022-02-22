@@ -1,15 +1,15 @@
 import WindiCSS from "vite-plugin-windicss";
-import { posthtmlPlugin } from "vite-plugin-posthtml";
-
-const include = require("posthtml-include");
-const extend = require("posthtml-extend");
+import { svelte } from "@sveltejs/vite-plugin-svelte"
 
 export default {
   root: "./src",
   plugins: [
-    WindiCSS(),
-    posthtmlPlugin({
-      plugins: [require("posthtml-extend")(), require("posthtml-include")()],
+    WindiCSS({
+      scan: {
+        dirs: ['.'], // all files in the cwd
+        fileExtensions: ['svelte', 'js', 'ts'], // also enabled scanning for js/ts
+      },
     }),
+    svelte()
   ],
 };
