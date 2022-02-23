@@ -16,10 +16,10 @@
     "eslint-plugin-svelte3": "^3.4.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
-    "vite": "^2.7.2",
     "windicss-analysis": "^0.3.5"
   },
   "dependencies": {
+    "vite": "^2.7.2",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.37",
     "svelte": "^3.46.4",
     "prettier-plugin-svelte": "^2.6.0",

@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite-plugin-windicss'
+import colors from './src/config/colors';
 
 // function range(size, startAt = 1) {
 //   return Array.from(Array(size).keys()).map(i => i + startAt)
 // }
 
-const colorlist = ['black', 'white', 'rose', 'pink', 'fuchsia', 'purple', 'violet', 'indigo', 'blue', 'lightBlue', 'sky', 'cyan', 'teal', 'emerald', 'green', 'lime', 'yellow', 'amber', 'orange', 'red', 'warmGray', 'trueGray', 'gray', 'coolGray', 'blueGray', 'slate', 'zink', 'neutral', 'stone', 'dark', 'light'];
+const colorlist = colors;
 const scale = [
   50,
   100,
@@ -18,6 +19,8 @@ const scale = [
   900
 ]
 
+const aspectRatio = require('windicss/plugin/aspect-ratio')
+
 const colorsafelist = colorlist.reduce((acc, val, index) => {
   scale.forEach(x => {
     if (!acc[index]) acc[index] = []
@@ -30,4 +33,7 @@ export default defineConfig({
   safelist: [
     ...colorsafelist
   ],
+  plugins: [
+    aspectRatio
+  ]
 })

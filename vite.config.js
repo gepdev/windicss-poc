@@ -1,15 +1,29 @@
-import WindiCSS from "vite-plugin-windicss";
+import { defineConfig } from "vite"
+import WindiCSS from "vite-plugin-windicss"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
+import path from "path"
 
-export default {
+export default defineConfig({
   root: "./src",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src")
+    }
+  },
   plugins: [
+    svelte(),
     WindiCSS({
+      config: '../windi.config.js',
       scan: {
-        dirs: ['.'], // all files in the cwd
-        fileExtensions: ['svelte', 'js', 'ts'], // also enabled scanning for js/ts
-      },
+        include: [
+          '**/*.{svelte,js}',
+          '*.{svelte,html,js}',
+        ],
+        exclude: [
+          '../node_modules/**/*',
+          '../.git/**/*',
+        ],
+      }
     }),
-    svelte()
   ],
-};
+});
